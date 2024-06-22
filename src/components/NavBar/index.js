@@ -2,7 +2,7 @@
 import './index.css'
 
 const NavBar = props => {
-  const {a} = props
+  const {score, topScore} = props
   return (
     <nav className="nav-con">
       <div className="logo-score-con">
@@ -15,8 +15,8 @@ const NavBar = props => {
           <h1 className="logo-name">Emoji Game</h1>
         </div>
         <div className="score-con">
-          <h1 className="score">Score: 0</h1>
-          <h1 className="top-score">Top Score: 0</h1>
+          <h1 className="score">Score: {score}</h1>
+          <h1 className="top-score">Top Score: {topScore}</h1>
         </div>
       </div>
     </nav>

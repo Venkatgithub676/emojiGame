@@ -18,24 +18,41 @@ import './index.css'
 import EmojiCard from '../EmojiCard'
 
 class EmojiGame extends Component {
-  state = {listItems: [], score: 0, topScore: 0}
+  state = {listItems: [], score: 0, topScore: 0, duplicateList: []}
 
   emojiBtn = id => {
+    let gameOver = false
     const shuffledEmojisList = () => {
       const {emojisList} = this.props
       return emojisList.sort(() => Math.random() - 0.5)
     }
-    console.log(shuffledEmojisList)
-    this.setState({listItems: shuffledEmojisList()})
+
+    const {duplicateList} = this.state
+    let {score} = this.state
+
+    const res = duplicateList.filter(each => each === id)
+    console.log(res)
+    if (res.length === duplicateList.length) {
+      duplicateList.push(id)
+      score += 1
+    }
+    const res1 =
+      res.length > duplicateList.length ? (gameOver = true) : (gameOver = false)
+    console.log(res1)
+    this.setState({
+      listItems: shuffledEmojisList(),
+      score,
+      gameOver,
+    })
   }
 
   render() {
-    const {listItems} = this.state
+    const {listItems, topScore, score} = this.state
     const {emojisList} = this.props
     const res = listItems.length === 0 ? emojisList : listItems
     return (
       <div className="bg-container">
-        <NavBar />
+        <NavBar score={score} topScore={topScore} />
         <div className="emoji-body">
           <ul className="ul-con">
             {res.map(each => (
