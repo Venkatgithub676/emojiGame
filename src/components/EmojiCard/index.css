@@ -1,0 +1,24 @@
+/* Write your code here. */
+
+.li-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24%;
+  height: 170px;
+  list-style-type: none;
+  background-color: #ffffff33;
+  border-radius: 25px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.emojis {
+  width: 100px;
+  height: 100px;
+}
+
+.emoji-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
