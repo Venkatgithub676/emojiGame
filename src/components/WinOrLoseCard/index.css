@@ -1,1 +1,50 @@
 /* Write your code here. */
+
+.win-lose-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+.dtls-img-con {
+  border-radius: 20px;
+  padding: 30px;
+  width: 50%;
+  display: flex;
+  background-color: #ffffff33;
+  justify-content: space-around;
+  align-items: center;
+}
+.dtls-con {
+  text-align: center;
+}
+.win-lose-heading {
+  font-family: 'Roboto';
+  color: #ffffff;
+  font-size: 40px;
+}
+.score-heading {
+  font-family: 'Roboto';
+  color: #ffffff;
+  font-size: 30px;
+}
+.final-score {
+  font-size: 30px;
+  font-family: 'Roboto';
+  color: #6a59ff;
+}
+.play-again {
+  width: 100px;
+  height: 35px;
+  font-weight: 600;
+  font-family: 'Roboto';
+  border-radius: 15px;
+  background-color: #ffce27;
+  border: none;
+  cursor: pointer;
+  color: #3d3d3d;
+}
+
+.img-win-lose {
+  width: 300px;
+}
